@@ -31,10 +31,10 @@ class BankAccountTests(unittest.TestCase):
             self.account.withdraw(1200000000000.0)  
 
     # Confirm the balance after two types of activities
-    def test_sequence_of_transactions(self):
+    def test_transactions(self):
         self.account.deposit(200.0)
         self.account.withdraw(150.0)
-        self.assertEqual(self.account.get_balance(), 1000000000060.0)
+        self.assertEqual(self.account.get_balance(), 1000000000050.0)
 
     # Ensure that depositing a negative amount throws an error
     def test_negative_deposit(self):
